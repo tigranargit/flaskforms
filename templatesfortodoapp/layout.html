@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title> To-do App </title>
+    </head>
+    <body style="background-color: #70BEF1; font-family: verdana;">
+        <h1> To-do App </h1>
+        {% block body %}
+        {% endblock body %}
+        <a href="{{ url_for('add') }}"> New Item </a>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Home </h2>
+<table>
+    <tr>
+        <th> Task No. </th>
+        <th> Name </th>
+        <th> Description </th>
+        <th> Status </th>
+        <th> Due Date </th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td> {{ task.id }} </td>
+        <td><a href="{{ url_for('update', tid=task.id) }}"> {{ task.name }} </a></td>
+        <td> {{ task.desc }} </td>
+        <td> {{ task.status }} </td>
+        <td> {{ task.due }} </td>
+        <td><a href="{{ url_for('delete', tid=task.id) }}"> delete </a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}
