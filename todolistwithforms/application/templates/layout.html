@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Tigran's To Do App</title>
+    </head>
+    <body>
+        <h1>Tigran's To Do App</h1>
+        {% block body %}
+        {% endblock body %}
+        <a href="{{ url_for('add') }}"> New Item </a>
+        <br>
+        <br>
+        <a href="{{ url_for('view') }}"> View All Tasks </a>
+    </body>
+</html>
